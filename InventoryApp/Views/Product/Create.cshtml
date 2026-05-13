@@ -1,0 +1,30 @@
+﻿@model Product
+
+<h1>Create Product</h1>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <label asp-for="Name" class="col-sm-3"></label>
+    <input asp-for="Name" class="col-sm-9" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    <label asp-for="SKU" class="col-sm-3"></label>
+    <input asp-for="SKU" class="col-sm-9" />
+    <span asp-validation-for="SKU"></span>
+    <br />
+    <label asp-for="Price" class="col-sm-3"></label>
+    <input asp-for="Price" class="col-sm-9" />
+    <span asp-validation-for="Price"></span>
+    <br />
+    <label asp-for="Stock" class="col-sm-3"></label>
+    <input asp-for="Stock" class="col-sm-9" />
+    <span asp-validation-for="Stock"></span>
+    <br />
+    <label asp-for="Category" class="col-sm-3"></label>
+    <input asp-for="Category" class="col-sm-9" />
+    <span asp-validation-for="Category"></span>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>

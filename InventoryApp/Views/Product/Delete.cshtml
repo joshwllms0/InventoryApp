@@ -1,0 +1,29 @@
+﻿@model Product
+
+<h1>Delete Product: @Model.Name</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">Product ID:</dt>
+        <dd class="col-sm-9">@Model.Id</dd>
+
+        <dt class="col-sm-3">Product Name:</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Product SKU:</dt>
+        <dd class="col-sm-9">@Model.SKU</dd>
+
+        <dt class="col-sm-3">Product Stock:</dt>
+        <dd class="col-sm-9">@Model.Stock</dd>
+
+        <dt class="col-sm-3">Product Price:</dt>
+        <dd class="col-sm-9">@Model.Price.ToString("C")</dd>
+
+        <dt class="col-sm-3">Product Category</dt>
+        <dd class="col-sm-9">@Model.Category</dd>
+    </dl>
+</div>
+<form asp-action="Delete" method="post">
+    <button type="submit" asp-route-id="@Model.Id" class="btn btn-primary">Submit</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>

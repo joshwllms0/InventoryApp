@@ -1,0 +1,31 @@
+﻿@model Product
+
+<h1>Edit Product: @Model.Name</h1>
+
+<form asp-action="Edit" method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <input type="hidden" asp-for="Id" />
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    <label asp-for="SKU"></label>
+    <input asp-for="SKU" />
+    <span asp-validation-for="SKU"></span>
+    <br />
+    <label asp-for="Stock"></label>
+    <input asp-for="Stock" />
+    <span asp-validation-for="Stock"></span>
+    <br />
+    <label asp-for="Price"></label>
+    <input asp-for="Price" />
+    <span asp-validation-for="Price"></span>
+    <br />
+    <label asp-for="Category"></label>
+    <input asp-for="Category" />
+    <span asp-validation-for="Category"></span>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
